@@ -1,0 +1,13 @@
+sf_imperavi_uploader_file:
+  url: /imperavi-uploader/file
+  class: sfRequestRoute
+  params: { module: sfImperaviUploader, action: uploadFile }
+  requirements:
+    sf_method: post
+
+sf_imperavi_uploader_image:
+  url: /imperavi-uploader/image
+  class: sfRequestRoute
+  params: { module: sfImperaviUploader, action: uploadImage }
+  requirements:
+    sf_method: post
