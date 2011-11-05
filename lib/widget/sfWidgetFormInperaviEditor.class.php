@@ -14,7 +14,7 @@ class sfWidgetFormImperaviEditor extends sfWidgetFormTextarea
     {
         $script = sprintf('
 <script type="text/javascript">
-    $("#%s").redactor();
+    var %1$s = $("#%1$s").redactor();
 </script>
 ', $this->generateId($name));
 
