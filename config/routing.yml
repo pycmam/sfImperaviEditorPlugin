@@ -5,6 +5,13 @@ sf_imperavi_uploader_file:
   requirements:
     sf_method: post
 
+sf_imperavi_uploader_file_delete:
+  url: /imperavi-uploader/delete
+  class: sfRequestRoute
+  params: { module: sfImperaviUploader, action: deleteFile }
+  requirements:
+    sf_method: get
+
 sf_imperavi_uploader_image:
   url: /imperavi-uploader/image
   class: sfRequestRoute

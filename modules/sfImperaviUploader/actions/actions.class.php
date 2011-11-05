@@ -6,6 +6,14 @@
 class sfImperaviUploaderActions extends sfActions
 {
     /**
+     * PreExecute
+     */
+    public function preExecute()
+    {
+        sfConfig::set('sf_web_debug', false);
+    }
+
+    /**
      * Загрузка файлов
      */
     public function executeUploadFile(sfWebRequest $request)
@@ -13,7 +21,20 @@ class sfImperaviUploaderActions extends sfActions
         if ($file = $this->processForm(new sfImperaviUploaderForm(), $request, false)) {
             return $this->renderPartial('file', array('file' => $file));
         }
-        return sfView::NONE;
+        return sfView::HEADER_ONLY;
+    }
+
+    /**
+     * Удаление файла
+     */
+    public function executeDeleteFile(sfWebRequest $request)
+    {
+        $file = str_replace('..', '', $request->getParameter('file'));
+        $path = sfConfig::get('sf_upload_dir'). '/' .$file;
+        if (file_exists($path)) {
+          @unlink($path);
+        }
+        return sfView::HEADER_ONLY;
     }
 
     /**
