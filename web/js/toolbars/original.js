@@ -70,8 +70,8 @@ var RTOOLBAR = {
 	video: { name: '_video', title: RLANG.video, func: 'showVideo' },
 	file: { name: 'file', title: RLANG.file, func: 'showFile' },
 	charmap: { name: 'charmap', title: RLANG.charmap, func: 'showCharmap' },
-	hilite:  {name: 'backcolor', title: RLANG.backcolor, func: 'show'},
-	fgcolor: {name: 'fontcolor', title: RLANG.fontcolor, func: 'show'},
+	//hilite:  {name: 'backcolor', title: RLANG.backcolor, func: 'show'},
+	//fgcolor: {name: 'fontcolor', title: RLANG.fontcolor, func: 'show'},
 	link:
 	{
 		name: 'link', title: RLANG.link, func: 'show',
